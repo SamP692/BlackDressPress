@@ -1,7 +1,9 @@
-import React             from 'react';
+import React from 'react';
+
+import { Nav } from './uiComponents';
 
 export default () => (
   <div>
-    Hello
+    <Nav />
   </div>
 );
