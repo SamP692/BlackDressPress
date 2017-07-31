@@ -1,9 +1,10 @@
-import React from 'react';
+import React         from 'react';
 
-import { Nav } from './uiComponents';
+import { Nav, Main } from './uiComponents';
 
 export default () => (
-  <div>
+  <div id="appContainer">
     <Nav />
+    <Main />
   </div>
 );
