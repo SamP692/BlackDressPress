@@ -21,6 +21,6 @@ export default {
   },
   externalLinks: {
     display: 'friends',
-    location: 'friends',
+    location: '/friends',
   },
 };
