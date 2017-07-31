@@ -1,1 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i');
+
+#navContainer {
+  width: 240px;
+  flex-wrap: wrap;
+  background-color: ##A62238;
+}
