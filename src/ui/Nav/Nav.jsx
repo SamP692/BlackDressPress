@@ -7,10 +7,6 @@ import { navLinks }         from '../../local.config';
 import './Nav.css';
 
 class Nav extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     const buildLinks = () => (
       Object.entries(navLinks).map(link => (
