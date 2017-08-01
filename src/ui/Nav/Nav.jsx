@@ -1,20 +1,44 @@
-import React     from 'react';
-import { Link }  from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link }             from 'react-router-dom';
+import { connect }          from 'react-redux';
 
-import { navLinks } from '../../local.config';
+import { navLinks }         from '../../local.config';
 
 import './Nav.css';
 
-export default () => {
-  const buildLinks = () => (
-    Object.entries(navLinks).map(link => (
-      <Link key={link[0]} to={link[1].location}>{link[1].display}</Link>
-    ))
-  );
+class Nav extends Component {
+  componentDidMount() {
+    console.log(this.props);
+  }
 
-  return (
-    <div id="navContainer">
-      {buildLinks()}
-    </div>
-  );
+  render() {
+    const buildLinks = () => (
+      Object.entries(navLinks).map(link => (
+        <Link
+          key={link[0]}
+          to={link[1].location}
+          className={
+            this.props.router.location.pathname === link[1].location ?
+              'selected' : null
+          }
+        >
+          {link[1].display}
+        </Link>
+      ))
+    );
+
+    return (
+      <div id="navContainer">
+        <img alt="logo" src="./bdpLogo.gif" />
+        <div id="linksContainer">{buildLinks()}</div>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  const { router } = state;
+  return { ...ownProps, router };
 };
+
+export default connect(mapStateToProps)(Nav);

@@ -1,7 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i');
 
 #navContainer {
+  font-family: 'IM Fell Double Pica', serif;
   width: 240px;
   flex-wrap: wrap;
-  background-color: ##A62238;
+  background-color: #A62238;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#navContainer img {
+  margin: 12px;
+  width: 214px;
+  height: 161px;
+}
+
+#navContainer #linksContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  overflow: visible;
+  width: 5em;
+  font-size: 24px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+#navContainer #linksContainer a {
+  color: white;
+  text-decoration: none;
+  width: 162px;
+  padding: 12px;
+}
+
+#navContainer #linksContainer a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+#navContainer #linksContainer .selected {
+  background-color: yellow;
+  width: 192px;
+  color: black;
 }

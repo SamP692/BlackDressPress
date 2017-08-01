@@ -1,1 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+
+#mainContainer {
+  font-family: 'EB Garamond', serif;
+  width: 600px;
+}
