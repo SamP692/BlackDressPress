@@ -1,3 +1,3 @@
-import navLinks from './cms/local/links.config';
+import pages    from './cms/local/pages.config';
 
-export { navLinks };
+export { pages };
