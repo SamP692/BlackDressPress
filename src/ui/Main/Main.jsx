@@ -1,12 +1,11 @@
-import React             from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react';
 
-import { Home }          from '../../uiComponents';
-
-export default () => (
-  <div id="mainContainer">
-    <Switch>
-      <Route exact path="/" component={Home} />
-    </Switch>
-  </div>
-);
+class Main extends Component {
+  render() {
+    return (
+      <div id="mainContainer">
+        hello
+      </div>
+    );
+  }
+}
