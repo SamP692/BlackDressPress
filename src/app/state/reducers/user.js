@@ -1,6 +1,6 @@
 import { defaultUser } from './defaults';
 
-const user = (state = defaultUser, action) => {
+export default (state = defaultUser, action) => {
   switch (action.type) {
     case 'UPDATE_SESSION': {
       const userData = {
@@ -16,5 +16,3 @@ const user = (state = defaultUser, action) => {
       return state;
   }
 };
-
-export default user;

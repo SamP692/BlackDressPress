@@ -12,9 +12,9 @@ class Nav extends Component {
       Object.entries(pages).map(page => (
         <Link
           key={page[0]}
-          to={page[1].location}
+          to={page[0]}
           className={
-            this.props.router.location.pathname === page[1].location ?
+            this.props.router.location.pathname === page[0] ?
               'selected' : null
           }
         >
@@ -26,7 +26,9 @@ class Nav extends Component {
     return (
       <div id="navContainer">
         <img alt="logo" src="./bdpLogo.gif" />
-        <div id="linksContainer">{buildLinks()}</div>
+        <div id="linksContainer">
+          {buildLinks()}
+        </div>
       </div>
     );
   }

@@ -1,3 +1,4 @@
-import defaultUser from './defaults/user';
+import defaultUser         from './defaults/user';
+import defaultUiComponents from './defaults/uiComponents';
 
-export { defaultUser };
+export { defaultUser, defaultUiComponents };
