@@ -11,7 +11,11 @@ class Main extends Component {
 
       for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
         const component = (
-          <div className={pageComponents[i].template}>stuff</div>
+          <div key={i} className={pageComponents[i].template}>
+            <img alt="mainImg" src={pageComponents[i].image} />
+            <p>{pageComponents[i].mainText}</p>
+            <h1>{pageComponents[i].header}</h1>
+          </div>
         );
 
         uiComponents.push(component);
@@ -22,7 +26,7 @@ class Main extends Component {
 
     return (
       <div id="mainContainer">
-        hello
+        {buildComponents()}
       </div>
     );
   }
