@@ -3,26 +3,28 @@ import { connect }          from 'react-redux';
 
 import { pages }            from '../../local.config';
 
+import './Main.css';
+
 class Main extends Component {
   render() {
     const buildComponents = () => {
       const pageComponents = pages[this.props.router.location.pathname].components;
       const uiComponents = [];
 
-      if (!pageComponents) return;
+      if (pageComponents) {
+        for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
+          const component = (
+            <div key={i} className={pageComponents[i].template}>
+              <img alt="mainImg" src={pageComponents[i].image} />
+              <p>{pageComponents[i].mainText}</p>
+              <h1>{pageComponents[i].header}</h1>
+            </div>
+          );
 
-      for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
-        const component = (
-          <div key={i} className={pageComponents[i].template}>
-            <img alt="mainImg" src={pageComponents[i].image} />
-            <p>{pageComponents[i].mainText}</p>
-            <h1>{pageComponents[i].header}</h1>
-          </div>
-        );
-
-        uiComponents.push(component);
+          uiComponents.push(component);
+        }
       }
-
+      
       return uiComponents;
     };
 
