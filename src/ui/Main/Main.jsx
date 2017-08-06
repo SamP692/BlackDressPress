@@ -9,6 +9,8 @@ class Main extends Component {
       const pageComponents = pages[this.props.router.location.pathname].components;
       const uiComponents = [];
 
+      if (!pageComponents) return;
+
       for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
         const component = (
           <div key={i} className={pageComponents[i].template}>
