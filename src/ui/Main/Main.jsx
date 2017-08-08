@@ -14,6 +14,7 @@ class Main extends Component {
       if (pageComponents) {
         for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
           const template = templates[pageComponents[i].template];
+          const convertTextToHTML = { __html: pageComponents[i].text };
 
           const component = (
             <div key={i} className={pageComponents[i].template}>
@@ -21,7 +22,7 @@ class Main extends Component {
                 <img alt="mainImg" src={pageComponents[i].image} />
               </div>
               <div className={template.text}>
-                <p>{pageComponents[i].mainText}</p>
+                <p dangerouslySetInnerHTML={convertTextToHTML} />
               </div>
               <div className={template.header}>
                 <h1>{pageComponents[i].header}</h1>
