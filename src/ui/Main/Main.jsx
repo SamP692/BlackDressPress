@@ -24,7 +24,7 @@ class Main extends Component {
                 <p>{pageComponents[i].mainText}</p>
               </div>
               <div className={template.header}>
-                <h1>{pageComponents[i].header.toUpperCase()}</h1>
+                <h1>{pageComponents[i].header}</h1>
               </div>
             </div>
           );

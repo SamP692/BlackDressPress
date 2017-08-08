@@ -6,4 +6,29 @@
   background-color: #A62238;
   padding: 12px;
   color: white;
+  vertical-align: top;
+}
+
+#mainContainer p {
+  font-size: 28px;
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
+}
+
+#mainContainer h1 {
+  letter-spacing: 5px;
+  font-variant: small-caps;
+  font-size: 45px;
+}
+
+.left {
+  float: left;
+  margin-right: 12px;
+}
+
+.bottom {
+  clear: both;
+  width: 95%;
+  margin-top: 12px;
 }
