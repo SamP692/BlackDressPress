@@ -10,6 +10,12 @@
   vertical-align: top;
 }
 
+#mainContainer h1 {
+  letter-spacing: 5px;
+  font-variant: small-caps;
+  font-size: 45px;
+}
+
 #mainContainer p {
   font-size: 28px;
   word-wrap: break-word;
@@ -23,10 +29,9 @@
   text-decoration: none;
 }
 
-#mainContainer h1 {
-  letter-spacing: 5px;
-  font-variant: small-caps;
-  font-size: 45px;
+#mainContainer p a:hover {
+  color: #A62238;
+  background-color: white;
 }
 
 .left {
