@@ -1,3 +1,4 @@
-import pages    from './cms/local/pages.config';
+import pages     from './cms/local/pages.config';
+import templates from './cms/local/templates.config';
 
-export { pages };
+export { pages, templates };
