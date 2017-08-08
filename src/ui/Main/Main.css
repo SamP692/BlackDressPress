@@ -3,6 +3,7 @@
 #mainContainer {
   font-family: 'EB Garamond', serif;
   width: 600px;
+  min-width: 600px;
   background-color: #A62238;
   padding: 12px;
   color: white;

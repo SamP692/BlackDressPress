@@ -3,6 +3,7 @@
 #navContainer {
   font-family: 'IM Fell Double Pica', serif;
   width: 240px;
+  min-width: 240px;
   flex-wrap: wrap;
   background-color: #A62238;
   margin-right: 10px;
