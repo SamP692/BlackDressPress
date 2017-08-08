@@ -18,6 +18,11 @@
   width: 100%;
 }
 
+#mainContainer p a {
+  color: #FF0;
+  text-decoration: none;
+}
+
 #mainContainer h1 {
   letter-spacing: 5px;
   font-variant: small-caps;
