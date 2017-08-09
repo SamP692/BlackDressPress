@@ -15,19 +15,30 @@ class Main extends Component {
       if (pageComponents) {
         for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
           const template = templates[pageComponents[i].template];
+
           const convertTextToHTML = { __html: pageComponents[i].text };
+          const componentElements = {
+            image: <img alt="mainImg" src={pageComponents[i].image} />,
+            text: <p dangerouslySetInnerHTML={convertTextToHTML} />,
+            header: <h1>{pageComponents[i].header}</h1>,
+          };
+
+          const buildElement = location => (
+            template[location] ?
+              <div className={location === 'bottom' ?
+                `${location} ${template.bottomAlign === 'left' ? 'bottomLeft' : 'bottomRight'}` : 
+                location}
+              >
+                {componentElements[template[location]]}
+              </div> :
+              null
+          );
 
           const component = (
             <div key={i} className={`mainContainer ${pageComponents[i].color}`}>
-              <div className={template.image}>
-                <img alt="mainImg" src={pageComponents[i].image} />
-              </div>
-              <div className={template.text}>
-                <p dangerouslySetInnerHTML={convertTextToHTML} />
-              </div>
-              <div className={template.header}>
-                <h1>{pageComponents[i].header}</h1>
-              </div>
+              {buildElement('left')}
+              {buildElement('right')}
+              {buildElement('bottom')}
             </div>
           );
 

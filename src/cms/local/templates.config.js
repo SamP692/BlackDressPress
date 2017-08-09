@@ -1,12 +1,14 @@
 export default {
   1: {
-    image: 'left',
-    text: 'right',
-    header: 'bottom',
+    left: 'image',
+    right: 'text',
+    bottom: 'header',
+    bottomAlign: 'left',
   },
   2: {
-    image: 'right',
-    text: 'left',
-    header: 'bottom',
+    right: 'image',
+    left: 'text',
+    bottom: 'header',
+    bottomAlign: 'right',
   },
 };

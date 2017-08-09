@@ -8,12 +8,33 @@
   color: white;
   vertical-align: top;
   margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainContainer div {
+  width: 49%;
+}
+
+.mainContainer .bottom {
+  width: 100%;
+}
+
+.mainContainer .bottomLeft {
+  text-align: left;
+  align-content: left;
+}
+
+.mainContainer .bottomRight {
+  text-align: right;
+  align-content: right;
 }
 
 .mainContainer h1 {
   letter-spacing: 5px;
   font-variant: small-caps;
   font-size: 45px;
+  width: 70%;
 }
 
 .mainContainer p {
@@ -22,6 +43,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  text-align: left;
 }
 
 .mainContainer p a {
@@ -34,13 +56,6 @@
   background-color: white;
 }
 
-.left {
-  float: left;
-  margin-right: 12px;
-}
-
-.bottom {
-  clear: both;
-  width: 95%;
-  margin-top: 12px;
+.mainContainer .right {
+  text-align: right;
 }

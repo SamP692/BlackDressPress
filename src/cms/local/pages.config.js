@@ -14,7 +14,7 @@ export default {
         header: 'just look at these street chairs',
         image: '/streetChairs.jpg',
         color: 'teal',
-        text: 'In this award-winning limited first edition by Lisa Gilman, you’ll find more than a hundred photos, along with “Notes on Abandoned Chairs” by AIGA Medal winner and design writer extraordinaire Ralph Caplan; and an introduction by Evan Hughes, award-winning furniture designer. Read more <a href="http://www.blackdresspress.com/gilmanstreetchairs.html">here</a>..',
+        text: 'In this award-winning limited first edition by Lisa Gilman, you’ll find more than a hundred photos, along with “Notes on Abandoned Chairs” by AIGA Medal winner and design writer extraordinaire Ralph Caplan; and an introduction by Evan Hughes, award-winning furniture designer. Read more <a href="http://www.blackdresspress.com/gilmanstreetchairs.html">here</a>.',
       },
     },
   },
