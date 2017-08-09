@@ -16,6 +16,13 @@ export default {
         color: 'teal',
         text: 'In this award-winning limited first edition by Lisa Gilman, you’ll find more than a hundred photos, along with “Notes on Abandoned Chairs” by AIGA Medal winner and design writer extraordinaire Ralph Caplan; and an introduction by Evan Hughes, award-winning furniture designer. Read more <a href="http://www.blackdresspress.com/gilmanstreetchairs.html">here</a>.',
       },
+      2: {
+        template: 1,
+        header: 'spinning jenny still has the moves',
+        image: '/spinningJenny13.jpg',
+        color: 'darkGreen',
+        text: 'Current issue available <a href="http://www.spinning-jenny.com/store.html">here.</a>',
+      },
     },
   },
   '/news': {

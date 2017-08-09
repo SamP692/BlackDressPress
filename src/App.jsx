@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
+import { push }             from 'react-router-redux';
 
 import { Nav, Main }        from './uiComponents';
 
@@ -8,7 +9,11 @@ import { pages }            from './local.config';
 class App extends Component {
   render() {
     const updatePageTitle = () => {
-      document.title = `BDP | ${pages[this.props.router.location.pathname].display}`;
+      if (pages[this.props.router.location.pathname]) {
+        document.title = `BDP | ${pages[this.props.router.location.pathname].display}`;
+      } else {
+        this.props.dispatch(push('/'));
+      }
     };
 
     return (
