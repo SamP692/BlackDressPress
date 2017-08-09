@@ -4,4 +4,9 @@ export default {
     text: 'right',
     header: 'bottom',
   },
+  2: {
+    image: 'right',
+    text: 'left',
+    header: 'bottom',
+  },
 };

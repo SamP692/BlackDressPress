@@ -4,6 +4,7 @@ import { connect }          from 'react-redux';
 import { pages, templates } from '../../local.config';
 
 import './Main.css';
+import './backgroundColors.css';
 
 class Main extends Component {
   render() {
@@ -17,7 +18,7 @@ class Main extends Component {
           const convertTextToHTML = { __html: pageComponents[i].text };
 
           const component = (
-            <div key={i} className={pageComponents[i].template}>
+            <div key={i} className={`mainContainer ${pageComponents[i].color}`}>
               <div className={template.image}>
                 <img alt="mainImg" src={pageComponents[i].image} />
               </div>
@@ -38,7 +39,7 @@ class Main extends Component {
     };
 
     return (
-      <div id="mainContainer">
+      <div>
         {buildComponents()}
       </div>
     );

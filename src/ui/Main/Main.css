@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
 
-#mainContainer {
+.mainContainer {
   font-family: 'EB Garamond', serif;
   width: 600px;
   min-width: 600px;
-  background-color: #A62238;
   padding: 12px;
   color: white;
   vertical-align: top;
+  margin-bottom: 12px;
 }
 
-#mainContainer h1 {
+.mainContainer h1 {
   letter-spacing: 5px;
   font-variant: small-caps;
   font-size: 45px;
 }
 
-#mainContainer p {
+.mainContainer p {
   font-size: 28px;
   word-wrap: break-word;
   padding: 0;
@@ -24,12 +24,12 @@
   width: 100%;
 }
 
-#mainContainer p a {
+.mainContainer p a {
   color: #FF0;
   text-decoration: none;
 }
 
-#mainContainer p a:hover {
+.mainContainer p a:hover {
   color: #A62238;
   background-color: white;
 }
