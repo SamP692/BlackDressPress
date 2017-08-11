@@ -1,57 +1,29 @@
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
 
-import { pages, templates } from '../../local.config';
+import ContentBox           from './ContentBox/ContentBox';
 
-import './Main.css';
-import './backgroundColors.css';
+import { pages }            from '../../local.config';
 
 class Main extends Component {
   render() {
-    const buildComponents = () => {
+    const buildContentBoxes = () => {
       const pageComponents = pages[this.props.router.location.pathname].components;
-      const uiComponents = [];
+
+      const contentBoxes = [];
 
       if (pageComponents) {
         for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
-          const template = templates[pageComponents[i].template];
-
-          const convertTextToHTML = { __html: pageComponents[i].text };
-          const componentElements = {
-            image: <img alt="mainImg" src={pageComponents[i].image} />,
-            text: <p dangerouslySetInnerHTML={convertTextToHTML} />,
-            header: <h1>{pageComponents[i].header}</h1>,
-          };
-
-          const buildElement = location => (
-            template[location] ?
-              <div className={location === 'bottom' ?
-                `${location} ${template.bottomAlign === 'left' ? 'bottomLeft' : 'bottomRight'}` : 
-                location}
-              >
-                {componentElements[template[location]]}
-              </div> :
-              null
-          );
-
-          const component = (
-            <div key={i} className={`mainContainer ${pageComponents[i].color}`}>
-              {buildElement('left')}
-              {buildElement('right')}
-              {buildElement('bottom')}
-            </div>
-          );
-
-          uiComponents.push(component);
+          contentBoxes.push(<ContentBox componentNumber={i} />);
         }
       }
 
-      return uiComponents;
+      return contentBoxes;
     };
 
     return (
       <div>
-        {buildComponents()}
+        {buildContentBoxes()}
       </div>
     );
   }
