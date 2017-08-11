@@ -27,6 +27,15 @@ export default {
   },
   '/news': {
     display: 'news',
+    components: {
+      0: {
+        template: 1,
+        header: 'we have some words for you',
+        image: '/gammaRays.gif',
+        color: 'softOrange',
+        text: 'Check out what Kate Colby has to <a href="http://blog.pshares.org/index.php/sixthth-sense-attempting-to-fill-the-explanatory-gap/">say</a> about Ryan Murphy.',
+      },
+    },
   },
   '/soon': {
     display: 'coming soon',
