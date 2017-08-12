@@ -9,15 +9,12 @@ class Main extends Component {
   render() {
     const buildContentBoxes = () => {
       const pageComponents = pages[this.props.router.location.pathname].components;
-
       const contentBoxes = [];
-
       if (pageComponents) {
         for (let i = 0; i < Object.keys(pageComponents).length; i += 1) {
           contentBoxes.push(<ContentBox componentNumber={i} />);
         }
       }
-
       return contentBoxes;
     };
 

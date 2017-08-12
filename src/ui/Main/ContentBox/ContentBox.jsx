@@ -3,8 +3,7 @@ import { connect }          from 'react-redux';
 
 import { pages, templates } from '../../../local.config';
 
-import './ContentBox.css';
-import './backgroundColors.css';
+import './styles.css';
 
 class ContentBox extends Component {
   render() {
@@ -35,8 +34,8 @@ class ContentBox extends Component {
 
       return (
         <div key={componentNumber} className={`mainContainer ${pageComponents[componentNumber].color}`}>
-          {buildElement('left')}
-          {buildElement('right')}
+          {buildElement(template.type === 'grid' ? 'left' : 'top')}
+          {buildElement(template.type === 'grid' ? 'right' : 'middle')}
           {buildElement('bottom')}
         </div>
       );
