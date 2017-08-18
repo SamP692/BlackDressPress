@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
 
@@ -10,7 +11,7 @@ class ContentBox extends Component {
     const hydrateContentBox = () => {
       const pageComponents = pages[this.props.router.location.pathname].components;
 
-      const componentNumber = this.props.componentNumber;
+      const componentNumber: string = this.props.componentNumber;
 
       const template = templates[pageComponents[componentNumber].template];
 
