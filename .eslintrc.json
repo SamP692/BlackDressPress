@@ -1,19 +1,15 @@
 {
-    "parser": "babel-eslint",
     "extends": "airbnb",
     "plugins": [
         "react",
         "jsx-a11y",
-        "import",
-        "flowtype"
+        "import"
     ],
     "env": {
       "browser": true,
       "node": true
     },
     "rules": {
-      "flowtype/define-flow-type": [1],
-      "flowtype/use-flow-type": [1],
       "jsx-a11y/href-no-hash": [0],
       "react/jsx-filename-extension": [0],
       "no-multi-spaces": [0],

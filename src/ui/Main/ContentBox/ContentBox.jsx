@@ -10,7 +10,7 @@ class ContentBox extends Component {
     const hydrateContentBox = () => {
       const pageComponents = pages[this.props.router.location.pathname].components;
 
-      const componentNumber: string = this.props.componentNumber;
+      const componentNumber = this.props.componentNumber;
 
       const template = templates[pageComponents[componentNumber].template];
 

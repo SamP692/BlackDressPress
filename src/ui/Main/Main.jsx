@@ -7,8 +7,8 @@ import { pages }            from '../../local.config';
 
 class Main extends Component {
   render() {
-    const buildContentBoxes: Component = () => {
-      const pageComponents: pageComponent[] = pages[this.props.router.location.pathname].components;
+    const buildContentBoxes = () => {
+      const pageComponents = pages[this.props.router.location.pathname].components;
       const contentBoxes: Component[] = [];
       if (pageComponents) {
         for (let i: number = 0; i < Object.keys(pageComponents).length; i += 1) {
