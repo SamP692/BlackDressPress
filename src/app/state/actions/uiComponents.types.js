@@ -6,6 +6,8 @@ export type UiComponent = {
   text: string;
 }
 
+export type UiComponentList = Array<UiComponent>
+
 export type UpdateComponents = {
   type: 'UPDATE_COMPONENTS';
   payload: UiComponent[];

@@ -1,6 +1,6 @@
 // @flow
-import { UiComponent, UpdateComponents } from './uiComponents.types';
+import { UiComponentList, UpdateComponents } from './uiComponents.types';
 
-export const UPDATE_COMPONENTS: UpdateComponents = (payload: UiComponent[]) => (
+export const UPDATE_COMPONENTS: UpdateComponents = (payload: UiComponentList) => (
   { type: 'UPDATE_COMPONENTS', payload }
 );
