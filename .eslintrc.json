@@ -35,7 +35,7 @@
       "space-infix-ops": [1],
       "eol-last": [0],
       "comma-dangle": [1],
-      "import/prefer-default-export": [1],
+      "import/prefer-default-export": [0],
       "indent": [1],
       "array-callback-return": [1],
       "consistent-return": [0],
