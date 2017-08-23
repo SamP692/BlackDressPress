@@ -1,3 +1,4 @@
+// @flow
 import { UpdateSession, EndSession, UserSession } from './user.types';
 
 export const UPDATE_SESSION: UpdateSession = (payload: UserSession) => (

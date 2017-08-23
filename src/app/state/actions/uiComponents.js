@@ -1,3 +1,4 @@
+// @flow
 import { UiComponent, UpdateComponents } from './uiComponents.types';
 
 export const UPDATE_COMPONENTS: UpdateComponents = (payload: UiComponent[]) => (
