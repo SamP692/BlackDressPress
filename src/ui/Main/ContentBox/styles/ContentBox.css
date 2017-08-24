@@ -4,6 +4,7 @@
   font-family: 'EB Garamond', serif;
   width: 600px;
   min-width: 600px;
+  min-height: 500px;
   padding: 12px;
   color: white;
   vertical-align: top;
@@ -12,12 +13,21 @@
   flex-wrap: wrap;
 }
 
+.sequential {
+  display: block;
+}
+
 .mainContainer div {
   width: 49%;
 }
 
 .mainContainer .bottom {
   width: 100%;
+}
+
+.mainContainer .bottom h1 {
+  display: inline-block;
+  width: 75%;
 }
 
 .mainContainer .bottomLeft {
@@ -34,7 +44,6 @@
   letter-spacing: 5px;
   font-variant: small-caps;
   font-size: 45px;
-  width: 75%;
 }
 
 .mainContainer p {
@@ -58,4 +67,23 @@
 
 .mainContainer .right {
   text-align: right;
+}
+
+.mainContainer .top {
+  width: 100%;
+}
+
+.mainContainer .middle {
+  width: 100%;
+  text-align: center;
+}
+
+.mainContainer .bottomFull {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.mainContainer .top h1 {
+  margin-left: 10px;
+  width: 75%;
 }

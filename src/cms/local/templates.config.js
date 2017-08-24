@@ -19,4 +19,9 @@ export default {
     middle: 'image',
     bottom: 'text',
   },
+  4: {
+    type: 'sequential',
+    top: 'header',
+    middle: 'text',
+  },
 };

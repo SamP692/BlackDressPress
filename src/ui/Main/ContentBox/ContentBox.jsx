@@ -21,7 +21,7 @@ class ContentBox extends Component {
         header: <h1>{pageComponents[componentNumber].header}</h1>,
       };
 
-      const buildElement = location => (
+      const buildGridElement = location => (
         template[location] ?
           <div className={location === 'bottom' ?
             `${location} ${template.bottomAlign === 'left' ? 'bottomLeft' : 'bottomRight'}` :
@@ -32,11 +32,22 @@ class ContentBox extends Component {
           null
       );
 
+      const buildSequentialElement = location => (
+        template[location] ?
+          <div className={location === 'bottom' ? 'bottomFull' : location}>
+            {componentElements[template[location]]}
+          </div> :
+          null
+      );
+
       return (
-        <div key={componentNumber} className={`mainContainer ${pageComponents[componentNumber].color}`}>
-          {buildElement(template.type === 'grid' ? 'left' : 'top')}
-          {buildElement(template.type === 'grid' ? 'right' : 'middle')}
-          {buildElement('bottom')}
+        <div
+          key={componentNumber}
+          className={`mainContainer ${pageComponents[componentNumber].color} ${template.type}`}
+        >
+          {template.type === 'grid' ? buildGridElement('left') : buildSequentialElement('top')}
+          {template.type === 'grid' ? buildGridElement('right') : buildSequentialElement('middle')}
+          {template.type === 'grid' ? buildGridElement('bottom') : buildSequentialElement('bottom')}
         </div>
       );
     };
