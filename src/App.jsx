@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     const updatePageTitle = () => {
       if (pages[this.props.router.location.pathname]) {
-        document.title = `BDP | ${pages[this.props.router.location.pathname].display}`;
+        document.title = `${pages[this.props.router.location.pathname].webTitle || 'BDP'}`;
       } else {
         this.props.dispatch(push('/'));
       }

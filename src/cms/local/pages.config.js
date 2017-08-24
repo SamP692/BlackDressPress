@@ -2,6 +2,7 @@
 export default {
   '/': {
     display: 'home',
+    webTitle: 'blllllllllack drrrrrrrrress prrrrrrrrress',
     components: {
       0: {
         template: 1,
@@ -28,6 +29,7 @@ export default {
   },
   '/news': {
     display: 'news',
+    webTitle: 'coming soonish',
     components: {
       0: {
         template: 3,
@@ -40,6 +42,7 @@ export default {
   },
   '/soon': {
     display: 'coming soon',
+    webTitle: 'coming soonish',
     components: {
       0: {
         template: 4,
@@ -51,6 +54,7 @@ export default {
   },
   '/about': {
     display: 'about',
+    webTitle: 'wots it all aboot?',
     components: {
       0: {
         template: 4,
@@ -62,6 +66,7 @@ export default {
   },
   '/store': {
     display: 'store',
+    webTitle: 'what\'s in your bag?',
     components: {
       0: {
         template: 4,
@@ -73,6 +78,7 @@ export default {
   },
   '/friends': {
     display: 'friends',
+    webTitle: 'lynx',
     components: {
       0: {
         template: 4,
