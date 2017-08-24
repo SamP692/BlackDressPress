@@ -62,8 +62,24 @@ export default {
   },
   '/store': {
     display: 'store',
+    components: {
+      0: {
+        template: 4,
+        header: 'store',
+        color: 'teal',
+        text: 'We here at Black Dress Press have heard a whole lot about ecommerce and shopping carts and bitcoins and venmo and velma and frankly a whole lot of things. So, we’re investing in our infrastructure to make us one of those shopping carts. <a href="https://en.m.wikipedia.org/wiki/Idiotarod">Idiotrodding</a> down your internets very soon. Meantime, if you have a consumer itch that needs scratching you can buy copies of <a href="http://www.blackdresspress.com/gilmanstreetchairs.html"><i>Street Chairs</i></a> and <a href="http://www.blackdresspress.com/murphymillbrook.html"><i>Millbrook</i></a> by clicking respectfully on their respective pages.',
+      },
+    },
   },
   '/friends': {
     display: 'friends',
+    components: {
+      0: {
+        template: 4,
+        header: 'resources',
+        color: 'gentleBrown',
+        text: '<a href="http://www.spinning-jenny.com/">Spinning Jenny</a><br /><br /><a href="http://www.poets.org/">Academy of American Poets</a><br /><br /><a href="http://clmp.org/directory/">CLMP Directory of Literary Magazines and Presses</a><br /><br /><a href="http://bit.ly/XNSNDn">Fractured Atlas</a><br /><br /><a href="http://www.spdbooks.org/">Small Press Distribution</a><br /><br /><a href="http://www.ubiquitymags.com/content/">Ubiquity Magazine Distributors</a><br />',
+      },
+    },
   },
 };
