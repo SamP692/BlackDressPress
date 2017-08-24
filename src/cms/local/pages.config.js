@@ -51,6 +51,14 @@ export default {
   },
   '/about': {
     display: 'about',
+    components: {
+      0: {
+        template: 4,
+        header: 'about <br /> black dress press',
+        color: 'black',
+        text: 'Founded in New York City, Black Dress Press is an independent literary small press and the publisher of the literary magazine <a href="www.spinning-jenny.com"><i>Spinning Jenny</i></a>.',
+      },
+    },
   },
   '/store': {
     display: 'store',

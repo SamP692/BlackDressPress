@@ -4,13 +4,16 @@
   font-family: 'EB Garamond', serif;
   width: 600px;
   min-width: 600px;
-  min-height: 500px;
+  min-height: 503px;
   padding: 12px;
   color: white;
   vertical-align: top;
-  margin-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.topBump {
+  margin-top: 12px;
 }
 
 .sequential {

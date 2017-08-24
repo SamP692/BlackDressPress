@@ -14,11 +14,12 @@ class ContentBox extends Component {
 
       const template = templates[pageComponents[componentNumber].template];
 
-      const convertTextToHTML = { __html: pageComponents[componentNumber].text };
+      const convertTextToHTML = type => ({ __html: pageComponents[componentNumber][type] });
       const componentElements = {
         image: <img alt="mainImg" src={pageComponents[componentNumber].image} />,
-        text: <p dangerouslySetInnerHTML={convertTextToHTML} />,
-        header: <h1>{pageComponents[componentNumber].header}</h1>,
+        text: <p dangerouslySetInnerHTML={convertTextToHTML('text')} />,
+        // header: <h1>{pageComponents[componentNumber].header}</h1>,
+        header: <h1 dangerouslySetInnerHTML={convertTextToHTML('header')} />,
       };
 
       const buildGridElement = location => (
@@ -43,7 +44,13 @@ class ContentBox extends Component {
       return (
         <div
           key={componentNumber}
-          className={`mainContainer ${pageComponents[componentNumber].color} ${template.type}`}
+          className={
+            `
+            mainContainer ${pageComponents[componentNumber].color}
+            ${template.type}
+            ${componentNumber > 0 ? 'topBump' : ''}
+            `
+          }
         >
           {template.type === 'grid' ? buildGridElement('left') : buildSequentialElement('top')}
           {template.type === 'grid' ? buildGridElement('right') : buildSequentialElement('middle')}

@@ -5,6 +5,8 @@ import ContentBox           from './ContentBox/ContentBox';
 
 import { pages }            from '../../local.config';
 
+import './Main.css';
+
 class Main extends Component {
   render() {
     const buildContentBoxes = () => {
